@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Checker</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+        h2 { color: #007BFF; }
+        input, textarea, button {
+            width: 100%; padding: 10px; margin: 10px 0;
+            border: 1px solid #ccc; border-radius: 4px;
+        }
+        button { background-color: #28a745; color: white; }
+    </style>
+</head>
+<body>
+    <h2>🩺 Symptom Checker</h2>
+    <form method="POST">
+        <textarea name="symptom" placeholder="Enter your symptoms here..." required></textarea>
+        <button type="submit">Check Disease</button>
+    </form>
+    {% if prediction %}
+        <h3>🧾 Predicted Disease: <span style="color:green">{{ prediction }}</span></h3>
+    {% endif %}
+</body>
+</html>
